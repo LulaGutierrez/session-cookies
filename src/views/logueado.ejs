@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenidx!</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+  <% if (user.color === 'verde') { %>
+    <body class="color_verde">
+  <% } else if (user.color === 'naranja') { %>
+    <body class="color_naranja">
+  <% } else if (user.color === 'rosa') { %>
+    <body class="color_rosa">
+  <% } else {%>
+    <body class="ningun_color" >
+  <% } %>
+    <body>
+        <main>
+        <section>
+          <p>
+            Hola! <%= user.nombre %> elegiste el color <%= user.color %>
+           y tu email es <%= user.email %>
+          </p>
+          <div >
+            <a href="/logout">Salir</a>
+          </div>
+        </section>
+      </main>
+  </body>
+  </html>

@@ -1,0 +1,1 @@
+module.exports = ['verde', 'naranja', 'rosa']

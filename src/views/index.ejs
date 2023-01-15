@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+  
+    <h2>Ingresá tu información</h2>
+    <form action="/" method="POST">
+    <div class="reg-form">
+      <label for="name">Ingrese su nombre</label>
+      <input class="form_input" type="text" id="name" name="nombre" value="<%= locals.old && old.nombre ? old.nombre : null %>">
+      <small class="msg"><%= locals.errors && errors.nombre ? errors.nombre.msg : null %></small>
+    </div>
+    <div class="reg-form">
+      <label for="email">Ingrese su mail</label>
+      <input class="form_input" type="email" id="email" name="email" value="<%= locals.old && old.email ? old.email : null %>">
+      <small class="msg"><%= locals.errors && errors.email ? errors.email.msg : null %></small>
+    </div>
+    <div class="reg-form">
+        <p>Seleccioná un color</p>
+        <select name="color" id="color" >
+            <option value="verde">verde</option>
+            <option value="naranja">naranja</option>
+            <option value="rosa">rosa</option>
+        </select>
+      <input type="checkbox" name="guardarColor" id="guardarColor"> 
+      <label for="">Recordar color</label>
+    </div>
+    <div class="reg-button">
+      <a class="Boton" href="/destroy" type="reset">Olvidar Color</a>
+      <input type="submit" value="Enviar">
+
+    </div>
+  </form>
+</body>
+</html>
+
